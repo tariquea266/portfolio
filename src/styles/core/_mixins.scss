@@ -1,1 +1,74 @@
 // reusable mixins
+
+
+$mid-small: 34.375rem;
+// $end-small: 769px;
+$end-small: 50rem;
+$max-width: 63.938rem;
+
+// Breakpoints you may use across the site within mixins
+$xxs: 22.5rem;
+$xs: 30rem;
+$s: $mid-small;
+$sm: 37.5rem;
+$m: $end-small;
+// $screen-m: $end-small;
+// $ml: 960px;
+$ml: 60rem;
+$l: $max-width;
+$xl: 75rem;
+$xxl: 87.5rem;
+
+// THE 3 VARIABLES BELOW CAN NOT BE REMOVED BECAUSE THEY ARE USED IN OTHER RADANCY SCSS PARTIALS
+$mid-small: $s;
+$end-small: $m;
+$end-large: $l;
+
+// Breakpoints you plan on using for the grid system
+$breakpointsUsedForGrid: "s"$s,
+    "m"$m,
+    "l"$l;
+
+$max-width: 90rem; // Do not use as a breakpoint, only use on width
+
+
+
+// Max width breakpoints
+
+@mixin small {
+    @media (max-width: #{$s}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$m}) {
+        @content;
+    }
+}
+
+@mixin min-large {
+    @media (max-width: #{$ml}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: #{$l}) {
+        @content;
+    }
+}
+
+@mixin max {
+    @media (max-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (max-width: #{$xxl}) {
+        @content;
+    }
+}
+
+// @include mobile {}

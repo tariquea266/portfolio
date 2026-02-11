@@ -1,7 +1,72 @@
 // body, html, common tags
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: system-ui, sans-serif;
-  background: #fff;
-  color: #111;
+    background-color: #fffaf7;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+// .scrollText {
+//   padding: 150px 0;
+//   overflow: hidden; // important
+
+//   span {
+//     display: inline-block; // very important
+//     white-space: nowrap;
+//     animation: marquee 20s linear infinite;
+//     font-weight: 700;
+//     font-size: 9.625rem;
+//     line-height: 125%;
+//     letter-spacing: -0.32px;
+//     color: #d9d9d9;
+//   }
+// }
+
+
+// @keyframes marquee {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }
+
+
+
+.scrollText {
+  padding: 150px 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.track span {
+  white-space: nowrap;
+  padding-right: 4rem;
+
+  font-weight: 700;
+  font-size: 9.625rem;
+  line-height: 1.25;
+  letter-spacing: -0.32px;
+  color: #d9d9d9;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

@@ -1,10 +1,11 @@
+import Whoiam from "./sections/About/Whoiam"
 
 function App() {
 
   return (
     <>  
    
-    <p>My App</p>
+    <Whoiam />
 
     </>
   )
