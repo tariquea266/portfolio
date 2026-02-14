@@ -1,24 +1,16 @@
-function Whoiam() {
+import { forwardRef } from "react";
 
+const WhoIAm = forwardRef(function WhoIAm(_, ref) {
   return (
-    <>
-      {/* 
-      <div className="scrollText">
-        <span>
-          Senior Frontend Developer building scalable, enterprise-grade interfaces
-        </span>
-      </div>
-      */}
-
+    <section ref={ref} className="whoiam">
       <div className="scrollText">
         <div className="track">
           <span>Senior Frontend Developer crafting scalable UI •</span>
           <span>Senior Frontend Developer crafting scalable UI •</span>
         </div>
       </div>
-    </>
+    </section>
   );
-  
-}
+});
 
-export default Whoiam;
+export default WhoIAm;
