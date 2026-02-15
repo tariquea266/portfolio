@@ -5,6 +5,7 @@ import { useHeroAnimations } from "./hero.hooks";
 import Navbar from "../../components/Navbar/Navbar";
 
 
+
 const Hero = forwardRef(function Hero({ onNavClick }, heroRef) {
   const contentRef = useRef(null);
   const navRef = useRef(null);
@@ -72,14 +73,12 @@ const Hero = forwardRef(function Hero({ onNavClick }, heroRef) {
               ref={scrollRef}
               className="scroll-down"
               onClick={() => {
-                  if (!scrollRef.current) return;
-                  scrollRef.current.style.transform = "translateY(40px)";
-                  window.scrollTo({
+                window.scrollTo({
                   top: window.innerHeight,
                   behavior: "smooth",
-                  });
+                });
               }}
-              >
+            >
               Scroll Down ↓
             </button>
           </div>
