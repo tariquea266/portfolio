@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Hero from "./sections/Hero/Hero";
-import WhoIAm from "./sections/About/WhoIAm";
+import Whoiam from "./sections/About/Whoiam";
 import Tools from "./sections/Tools/Tools";
 import Projects from "./sections/Projects/Projects";
 import Aibanner from "./sections/Aibanner/Aibanner";
@@ -9,12 +9,12 @@ import Contact from "./sections/Contact/Contact";
 
 function App() {
   const heroRef = useRef(null);
-  const whoIAmRef = useRef(null);
+  const whoiamRef = useRef(null);
   const projectsRef = useRef(null);
   const howiworkRef = useRef(null);
   const contactRef = useRef(null);
 
-  const sections = { hero: heroRef, whoiam: whoIAmRef, projects: projectsRef, howiwork: howiworkRef, contact: contactRef };
+  const sections = { hero: heroRef, whoiam: whoiamRef, projects: projectsRef, howiwork: howiworkRef, contact: contactRef };
 
   const handleNavClick = (section) => {
     sections[section].current.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Hero ref={heroRef} onNavClick={handleNavClick} />
-      <WhoIAm ref={whoIAmRef} />
+      <Whoiam ref={whoiamRef} />
       <Tools/>
       <Projects ref={projectsRef} />
       <Aibanner/>
