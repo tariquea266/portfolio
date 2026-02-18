@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const WhoIAm = forwardRef(function WhoIAm(_, ref) {
+const Whoiam = forwardRef(function Whoiam(_, ref) {
   return (
     <section ref={ref} className="whoiam">
       <div className="scrollText">
@@ -13,4 +13,4 @@ const WhoIAm = forwardRef(function WhoIAm(_, ref) {
   );
 });
 
-export default WhoIAm;
+export default Whoiam;
